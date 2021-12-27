@@ -24,7 +24,7 @@ public class GoogleSheetsLiveTest {
             Arrays.asList("clothes", "20"),
             Arrays.asList("shoes", "5")));
     // ...
-    String SPREADSHEET_ID = "1DoPOm7WinM7C0KeU8380Y-WIM-IuJrggiVnw43aOWC8";
+    String SPREADSHEET_ID = "14cFRQQdeXiFbk2r_QIRU9g7DugZzO7tdcdIv5EJADMs";
     UpdateValuesResponse result = sheetsService.spreadsheets().values()
             .update(SPREADSHEET_ID, "A1", body)
             .setValueInputOption("RAW")

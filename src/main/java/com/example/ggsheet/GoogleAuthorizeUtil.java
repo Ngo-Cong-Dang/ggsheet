@@ -40,6 +40,7 @@ public class GoogleAuthorizeUtil {
    * Nếu sửa đổi quyền thì bạn cần xóa thư mục  tokens/ để đăng nhập lại
    */
   private static final List<String> SCOPES = Collections.singletonList(SheetsScopes.SPREADSHEETS);
+
   private static final String CREDENTIALS_FILE_PATH = "/client_secret.json";
 
     /**
@@ -67,8 +68,8 @@ public class GoogleAuthorizeUtil {
             .setDataStoreFactory(new FileDataStoreFactory(new java.io.File(TOKENS_DIRECTORY_PATH)))
             .setAccessType("offline")
             .build();
-    LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8088).build();
-    return new AuthorizationCodeInstalledApp(flow, receiver).authorize("dangnc.cntt@gmail.com");
+    LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8081).build();
+    return new AuthorizationCodeInstalledApp(flow, receiver).authorize("quanglinh3045@gmail.com");
   }
 
   /**
